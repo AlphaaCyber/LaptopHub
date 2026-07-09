@@ -507,6 +507,10 @@ function switchView(view) {
       switchView("login");
       return;
     }
+    // Simpan state aktif ke sessionStorage dan set cookie persistensi
+    sessionStorage.setItem("admin_active_view", "admin");
+    setCookie("admin_session", loggedInUser.email || loggedInUser.uid, 1);
+
     // Sembunyikan elemen utama user
     if (navSection) navSection.classList.add("d-none");
     if (userMainContainer) userMainContainer.classList.add("d-none");
@@ -534,6 +538,7 @@ function switchView(view) {
     if (adminSection) adminSection.classList.add("d-none");
 
     if (view === "catalog") {
+      sessionStorage.removeItem("admin_active_view");
       homeSection.classList.add("d-none");
       catalogSection.classList.remove("d-none");
       if (loginSection) loginSection.classList.add("d-none");
@@ -558,12 +563,14 @@ function switchView(view) {
         if (errorAlert) errorAlert.classList.add("d-none");
       }
     } else if (view === "detail") {
+      sessionStorage.removeItem("admin_active_view");
       homeSection.classList.add("d-none");
       catalogSection.classList.add("d-none");
       if (loginSection) loginSection.classList.add("d-none");
       if (detailSection) detailSection.classList.remove("d-none");
     } else {
       // Default: home
+      sessionStorage.removeItem("admin_active_view");
       homeSection.classList.remove("d-none");
       catalogSection.classList.add("d-none");
       if (loginSection) loginSection.classList.add("d-none");
@@ -596,8 +603,17 @@ function handleAuthStateChange(user) {
     // Admin login
     if (btnLoginNav) btnLoginNav.classList.add("d-none");
     if (btnLogoutNav) btnLogoutNav.classList.remove("d-none");
+
+    // Jika cookie session diset atau active view adalah admin, arahkan ke admin dashboard
+    if (getCookie("admin_session") || sessionStorage.getItem("admin_active_view") === "admin") {
+      setCookie("admin_session", user.email || user.uid, 1);
+      sessionStorage.setItem("admin_active_view", "admin");
+      switchView("admin");
+    }
   } else {
     // Admin logout
+    eraseCookie("admin_session");
+    sessionStorage.removeItem("admin_active_view");
     if (btnLoginNav) btnLoginNav.classList.add("d-none"); // Tetap disembunyikan agar login bersifat rahasia
     if (btnLogoutNav) btnLogoutNav.classList.add("d-none");
     switchView("home");
@@ -1190,4 +1206,32 @@ function renderAdminLatestLaptops() {
   }).join("");
 
   if (window.lucide) window.lucide.createIcons();
+}
+
+/**
+ * Utilitas untuk mengelola Cookie Admin Session
+ */
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+}
+
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const ca = document.cookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+function eraseCookie(name) {
+  document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=Lax';
 }
