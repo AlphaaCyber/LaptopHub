@@ -1,0 +1,32 @@
+{
+  "entities": {
+    "Laptop": {
+      "title": "Laptop",
+      "description": "Katalog laptop beserta spesifikasi lengkap",
+      "type": "object",
+      "properties": {
+        "nama": { "type": "string" },
+        "brand": { "type": "string" },
+        "kategori": { "type": "string" },
+        "hargaBaru": { "type": "integer" },
+        "hargaBekas": { "type": "integer" },
+        "processor": { "type": "string" },
+        "gpu": { "type": "string" },
+        "ram": { "type": "string" },
+        "storage": { "type": "string" },
+        "layar": { "type": "string" },
+        "deskripsi": { "type": "string" },
+        "gambar": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["nama", "brand", "kategori", "hargaBaru", "hargaBekas"]
+    }
+  },
+  "firestore": {
+    "/laptops/{laptopId}": {
+      "schema": "Laptop",
+      "description": "Daftar laptop yang terdaftar dalam katalog"
+    }
+  }
+}

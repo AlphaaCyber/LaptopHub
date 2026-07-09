@@ -1,0 +1,1035 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaptopHub - Katalog & Spesifikasi Laptop Terlengkap</title>
+    <!-- Bootstrap 5.3 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/index.css">
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top glass-header py-3 shadow-sm" id="nav-section">
+      <div class="container">
+        <a class="navbar-brand fw-extrabold text-primary d-flex align-items-center gap-2 fs-4" href="#" id="brand-link">
+          <i data-lucide="laptop" class="text-primary" style="width: 28px; height: 28px;"></i>
+          <span>Laptop<span class="text-dark">Hub</span></span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 gap-2">
+            <li class="nav-item">
+              <a class="nav-link active fw-semibold text-primary" href="#" id="nav-home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-muted" href="#" id="nav-catalog">Katalog Laptop</a>
+            </li>
+            <li class="nav-item d-none" id="nav-admin-dashboard-li">
+              <a class="nav-link fw-semibold text-success" href="#" id="nav-admin-dashboard">Dashboard Admin</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <span id="admin-status-badge" class="badge bg-primary text-white border rounded-pill d-none px-3 py-2">
+              <span class="spinner-grow spinner-grow-sm text-white me-2" role="status" style="width: 10px; height: 10px;"></span>
+              Admin Mode
+            </span>
+            <button class="btn btn-outline-primary rounded-pill px-4 d-none" id="btn-login-nav">
+              <i class="align-middle me-1" data-lucide="log-in" style="width: 16px; height: 16px;"></i> Login Admin
+            </button>
+            <button class="btn btn-danger rounded-pill px-4 d-none" id="btn-logout-nav">
+              <i class="align-middle me-1" data-lucide="log-out" style="width: 16px; height: 16px;"></i> Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main class="mb-5" id="user-main-container">
+
+      <!-- ================= HOME VIEW (HOMEPAGE) ================= -->
+      <section id="home-section">
+        <!-- HERO BANNER -->
+        <header class="hero-gradient text-white py-5 mb-5">
+          <div class="container py-4">
+            <div class="row align-items-center g-5">
+              <div class="col-lg-7 text-center text-lg-start">
+                <span class="badge bg-white text-primary rounded-pill px-3 py-2 text-uppercase mb-3 fw-bold tracking-wider animate-pulse-subtle">Promo Terbaik Tahun Ini</span>
+                <h1 class="display-4 fw-extrabold mb-3 tracking-tight text-white">Temukan Laptop Impian Anda Hari Ini</h1>
+                <p class="lead mb-4 col-lg-11 text-white-50">LaptopHub menyediakan database katalog dan spesifikasi laptop terlengkap di Indonesia. Bandingkan performa processor, GPU, RAM, dan temukan harga pasar terbaik!</p>
+                
+                <!-- Home Search Bar inside Hero -->
+                <div class="bg-white p-2 rounded-pill shadow-lg d-flex align-items-center max-width-600" style="max-width: 600px; margin: 0 auto 0 0;">
+                  <i data-lucide="search" class="text-secondary ms-3" style="width: 20px; height: 20px;"></i>
+                  <input type="text" class="form-control border-0 bg-transparent py-2 px-3 focus-ring-none" id="home-search-input" placeholder="Cari ASUS ROG, M3 Macbook, Intel i7...">
+                  <button class="btn btn-primary rounded-pill px-4 py-2" id="btn-home-search">Cari</button>
+                </div>
+              </div>
+              <div class="col-lg-5 d-none d-lg-block text-center">
+                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=600&auto=format&fit=crop" class="img-fluid rounded-4 shadow-lg border border-light border-opacity-10" style="max-height: 340px; object-fit: cover; transform: rotate(-1deg); border-width: 8px !important;" alt="Laptop Mockup" referrerPolicy="no-referrer">
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- TRUST BADGES SECTION -->
+        <div class="container mb-5">
+          <div class="card border-0 shadow-sm p-4 bg-white rounded-4">
+            <div class="row text-center g-4">
+              <div class="col-md-4 border-end border-light">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="p-3 bg-primary-subtle text-primary rounded-circle mb-3">
+                    <i data-lucide="shield-check" style="width: 28px; height: 28px;"></i>
+                  </div>
+                  <h6 class="fw-bold text-dark mb-1">Katalog Resmi & Valid</h6>
+                  <p class="text-muted small mb-0 col-10 mx-auto">Semua data spesifikasi laptop diverifikasi oleh tim kurator profesional kami.</p>
+                </div>
+              </div>
+              <div class="col-md-4 border-end border-light">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="p-3 bg-success-subtle text-success rounded-circle mb-3">
+                    <i data-lucide="tag" style="width: 28px; height: 28px;"></i>
+                  </div>
+                  <h6 class="fw-bold text-dark mb-1">Panduan Harga Riil</h6>
+                  <p class="text-muted small mb-0 col-10 mx-auto">Dapatkan komparasi harga unit baru dan perkiraan harga unit bekas terupdate.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="p-3 bg-purple-subtle text-purple rounded-circle mb-3">
+                    <i data-lucide="zap" style="width: 28px; height: 28px;"></i>
+                  </div>
+                  <h6 class="fw-bold text-dark mb-1">Filter Pencarian Instan</h6>
+                  <p class="text-muted small mb-0 col-10 mx-auto">Saring laptop idaman berdasarkan processor, kapasitas RAM, dan budget secara tepat.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LAPTOP CATEGORIES -->
+        <div class="container mb-5">
+          <div class="d-flex flex-column align-items-center text-center mb-4">
+            <span class="badge bg-primary text-white text-uppercase mb-2">Sesuai Kebutuhan Anda</span>
+            <h2 class="fw-extrabold text-dark">Telusuri Kategori Laptop</h2>
+            <p class="text-muted small col-lg-6">Pilih kategori laptop yang sesuai dengan aktivitas produktivitas, hobi, atau jenjang karir profesional Anda.</p>
+          </div>
+          
+          <div class="row justify-content-center g-4">
+            <div class="col-6 col-md-4 col-lg-2-4">
+              <div class="card h-100 border-0 shadow-sm category-card text-center p-4 rounded-4" data-category="Gaming">
+                <div class="category-icon-wrapper bg-danger-subtle text-danger">
+                  <i data-lucide="gamepad-2" style="width: 28px; height: 28px;"></i>
+                </div>
+                <h6 class="fw-bold text-dark mb-1">Gaming</h6>
+                <span class="text-muted small" style="font-size: 11px !important;">Performa Tinggi</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2-4">
+              <div class="card h-100 border-0 shadow-sm category-card text-center p-4 rounded-4" data-category="Business">
+                <div class="category-icon-wrapper bg-primary-subtle text-primary">
+                  <i data-lucide="briefcase" style="width: 28px; height: 28px;"></i>
+                </div>
+                <h6 class="fw-bold text-dark mb-1">Business</h6>
+                <span class="text-muted small" style="font-size: 11px !important;">Elegan & Mobile</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2-4">
+              <div class="card h-100 border-0 shadow-sm category-card text-center p-4 rounded-4" data-category="Creator">
+                <div class="category-icon-wrapper bg-purple-subtle text-purple">
+                  <i data-lucide="palette" style="width: 28px; height: 28px;"></i>
+                </div>
+                <h6 class="fw-bold text-dark mb-1">Creator</h6>
+                <span class="text-muted small" style="font-size: 11px !important;">Desain & Render</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2-4">
+              <div class="card h-100 border-0 shadow-sm category-card text-center p-4 rounded-4" data-category="Student">
+                <div class="category-icon-wrapper bg-warning-subtle text-warning">
+                  <i data-lucide="graduation-cap" style="width: 28px; height: 28px;"></i>
+                </div>
+                <h6 class="fw-bold text-dark mb-1">Student</h6>
+                <span class="text-muted small" style="font-size: 11px !important;">Belajar & Tugas</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2-4">
+              <div class="card h-100 border-0 shadow-sm category-card text-center p-4 rounded-4" data-category="Productivity">
+                <div class="category-icon-wrapper bg-success-subtle text-success">
+                  <i data-lucide="zap" style="width: 28px; height: 28px;"></i>
+                </div>
+                <h6 class="fw-bold text-dark mb-1">Productivity</h6>
+                <span class="text-muted small" style="font-size: 11px !important;">Kerja & Ringan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LAPTOP TERBARU -->
+        <div class="container mb-5">
+          <div class="d-flex justify-content-between align-items-end mb-4">
+            <div>
+              <span class="badge bg-success text-white text-uppercase mb-1">Katalog Terbaru</span>
+              <h3 class="fw-extrabold text-dark mb-0">Rilisan Laptop Terbaru</h3>
+            </div>
+            <button class="btn btn-outline-primary rounded-pill btn-view-all-laptops px-4">
+              Lihat Semua <i data-lucide="arrow-right" class="align-middle ms-1" style="width: 16px; height: 16px;"></i>
+            </button>
+          </div>
+          <div class="row" id="home-latest-container">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- LAPTOP POPULER / PILIHAN -->
+        <div class="container mb-5">
+          <div class="d-flex justify-content-between align-items-end mb-4">
+            <div>
+              <span class="badge bg-warning text-dark text-uppercase mb-1">Best Selling</span>
+              <h3 class="fw-extrabold text-dark mb-0">Rekomendasi Laptop Populer</h3>
+            </div>
+            <button class="btn btn-outline-primary rounded-pill btn-view-all-laptops px-4">
+              Lihat Semua <i data-lucide="arrow-right" class="align-middle ms-1" style="width: 16px; height: 16px;"></i>
+            </button>
+          </div>
+          <div class="row" id="home-popular-container">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= USER VIEW (KATALOG & FILTER) ================= -->
+      <section id="catalog-section" class="d-none py-4">
+        <div class="container">
+          <div class="row">
+            
+            <!-- SIDEBAR FILTER -->
+            <div class="col-12 col-lg-3 mb-4">
+              <div class="card border-0 shadow-sm rounded-4 sticky-sidebar p-4 bg-white">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <h5 class="fw-bold text-dark m-0 d-flex align-items-center gap-2">
+                    <i data-lucide="sliders-horizontal" class="text-primary" style="width: 20px; height: 20px;"></i>
+                    Filter Spesifikasi
+                  </h5>
+                  <button class="btn btn-sm btn-link text-decoration-none text-muted p-0" id="btn-reset-filters">
+                    Reset Semua
+                  </button>
+                </div>
+
+                <form id="filter-form">
+                  <!-- Brand Filter -->
+                  <div class="mb-3">
+                    <label class="form-label fw-bold text-dark small">Brand Laptop</label>
+                    <select class="form-select rounded-3 text-muted" id="filter-brand">
+                      <option value="">Semua Brand</option>
+                      <option value="ASUS">ASUS</option>
+                      <option value="Lenovo">Lenovo</option>
+                      <option value="Acer">Acer</option>
+                      <option value="HP">HP</option>
+                      <option value="Apple">Apple</option>
+                      <option value="MSI">MSI</option>
+                      <option value="Dell">Dell</option>
+                      <option value="Infinix">Infinix</option>
+                      <option value="Xiaomi">Xiaomi</option>
+                      <option value="Gigabyte">Gigabyte</option>
+                    </select>
+                  </div>
+
+                  <!-- Kategori Filter -->
+                  <div class="mb-3">
+                    <label class="form-label fw-bold text-dark small">Kategori / Penggunaan</label>
+                    <select class="form-select rounded-3 text-muted" id="filter-category">
+                      <option value="">Semua Kategori</option>
+                      <option value="Gaming">Gaming / Performa Tinggi</option>
+                      <option value="Productivity">Productivity / Kerja</option>
+                      <option value="Creator">Content Creator / Desain</option>
+                      <option value="Business">Business / Elegan</option>
+                      <option value="Student">Student / Sekolah</option>
+                    </select>
+                  </div>
+
+                  <!-- Processor Filter -->
+                  <div class="mb-3">
+                    <label class="form-label fw-bold text-dark small">Processor (CPU)</label>
+                    <select class="form-select rounded-3 text-muted" id="filter-cpu">
+                      <option value="">Semua CPU</option>
+                      <option value="Intel Core i9">Intel Core i9</option>
+                      <option value="Intel Core i7">Intel Core i7</option>
+                      <option value="Intel Core i5">Intel Core i5</option>
+                      <option value="Intel Core i3">Intel Core i3</option>
+                      <option value="AMD Ryzen 9">AMD Ryzen 9</option>
+                      <option value="AMD Ryzen 7">AMD Ryzen 7</option>
+                      <option value="AMD Ryzen 5">AMD Ryzen 5</option>
+                      <option value="AMD Ryzen 3">AMD Ryzen 3</option>
+                      <option value="Apple M">Apple M-Series</option>
+                    </select>
+                  </div>
+
+                  <!-- RAM Filter -->
+                  <div class="mb-3">
+                    <label class="form-label fw-bold text-dark small">Ukuran RAM</label>
+                    <select class="form-select rounded-3 text-muted" id="filter-ram">
+                      <option value="">Semua Ukuran RAM</option>
+                      <option value="4GB">4 GB</option>
+                      <option value="8GB">8 GB</option>
+                      <option value="12GB">12 GB</option>
+                      <option value="16GB">16 GB</option>
+                      <option value="24GB">24 GB</option>
+                      <option value="32GB">32 GB</option>
+                      <option value="64GB">64 GB</option>
+                    </select>
+                  </div>
+
+                  <!-- Storage Filter -->
+                  <div class="mb-3">
+                    <label class="form-label fw-bold text-dark small">Penyimpanan (ROM)</label>
+                    <select class="form-select rounded-3 text-muted" id="filter-storage">
+                      <option value="">Semua Penyimpanan</option>
+                      <option value="256GB SSD">256 GB SSD</option>
+                      <option value="512GB SSD">512 GB SSD</option>
+                      <option value="1TB SSD">1 TB SSD</option>
+                      <option value="2TB SSD">2 TB SSD</option>
+                    </select>
+                  </div>
+
+                  <!-- GPU Filter -->
+                  <div class="mb-3">
+                    <label class="form-label fw-bold text-dark small">Kartu Grafis (GPU)</label>
+                    <select class="form-select rounded-3 text-muted" id="filter-gpu">
+                      <option value="">Semua GPU</option>
+                      <option value="RTX 4090">NVIDIA RTX 4090</option>
+                      <option value="RTX 4080">NVIDIA RTX 4080</option>
+                      <option value="RTX 4070">NVIDIA RTX 4070</option>
+                      <option value="RTX 4060">NVIDIA RTX 4060</option>
+                      <option value="RTX 4050">NVIDIA RTX 4050</option>
+                      <option value="RTX 3060">NVIDIA RTX 3060</option>
+                      <option value="RTX 3050">NVIDIA RTX 3050</option>
+                      <option value="GTX">NVIDIA GTX Series</option>
+                      <option value="Iris">Intel Iris Xe Graphics</option>
+                      <option value="Radeon">AMD Radeon Graphics</option>
+                      <option value="Apple">Apple M-Series GPU</option>
+                    </select>
+                  </div>
+
+                  <!-- Rentang Harga Filter -->
+                  <div class="mb-4">
+                    <label class="form-label fw-bold text-dark small">Rentang Harga Baru (Rp)</label>
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <input type="number" class="form-control rounded-3 text-muted small py-2" id="filter-harga-min" placeholder="Min (cth: 5000000)" min="0">
+                      </div>
+                      <div class="col-6">
+                        <input type="number" class="form-control rounded-3 text-muted small py-2" id="filter-harga-max" placeholder="Max (cth: 20000000)" min="0">
+                      </div>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+            <!-- LIST CATALOG -->
+            <div class="col-12 col-lg-9">
+              <!-- Search Bar inside Catalog View -->
+              <div class="card border-0 shadow-sm rounded-4 p-3 mb-4 bg-white">
+                <div class="input-group">
+                  <span class="input-group-text bg-light border-0 text-muted rounded-start-3"><i data-lucide="search" style="width: 18px; height: 18px;"></i></span>
+                  <input type="text" class="form-control bg-light border-0 rounded-end-3 py-2 px-3 focus-ring-none" id="catalog-search-input" placeholder="Cari nama, brand, processor, atau GPU laptop...">
+                </div>
+              </div>
+
+              <!-- Header Sorting & Total -->
+              <div class="card border-0 shadow-sm rounded-4 p-3 mb-4 bg-white">
+                <div class="row align-items-center g-3">
+                  <div class="col-sm-6 text-center text-sm-start">
+                    <span class="text-muted small">Menampilkan <strong class="text-primary" id="catalog-count">0</strong> laptop terdaftar</span>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="d-flex justify-content-center justify-content-sm-end align-items-center gap-2">
+                      <label class="text-muted small text-nowrap m-0">Urutkan:</label>
+                      <select class="form-select form-select-sm rounded-3 bg-light border-0 py-2 px-3 fw-medium text-dark" style="width: auto;" id="catalog-sort">
+                        <option value="newest">Terbaru Diinput</option>
+                        <option value="price-asc">Harga Baru: Terendah</option>
+                        <option value="price-desc">Harga Baru: Tertinggi</option>
+                        <option value="name-asc">Nama: A - Z</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARDS GRID -->
+              <div class="row" id="laptop-cards-container">
+                <!-- Grid akan dirender oleh JS -->
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ADMIN LOGIN VIEW ================= -->
+      <section id="login-section" class="d-none py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-5 col-xl-4">
+              <div class="card border-0 shadow-lg rounded-4 overflow-hidden bg-white">
+                <div class="card-header bg-primary text-white text-center py-4">
+                  <div class="d-flex flex-column align-items-center gap-2">
+                    <i data-lucide="shield-alert" class="animate-pulse-subtle text-white mb-2" style="width: 48px; height: 48px;"></i>
+                    <h4 class="fw-extrabold m-0 tracking-tight">Login Administrator</h4>
+                    <p class="text-white-50 small m-0">Katalog & Spesifikasi LaptopHub</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <!-- Bootstrap Alert for Error Messages -->
+                  <div id="page-login-error-alert" class="alert alert-danger alert-dismissible fade show d-none rounded-3 small py-2.5 px-3 mb-4" role="alert">
+                    <span id="page-login-error-text">Email atau password salah.</span>
+                    <button type="button" class="btn-close" id="btn-close-error-alert" style="padding: 0.75rem 1rem; font-size: 0.75rem;"></button>
+                  </div>
+
+                  <form id="page-login-form">
+                    <div class="mb-3">
+                      <label for="page-login-email" class="form-label fw-bold text-dark small">Email Admin</label>
+                      <div class="input-group">
+                        <span class="input-group-text bg-light text-muted border-end-0"><i data-lucide="mail" style="width:16px;height:16px;"></i></span>
+                        <input type="email" class="form-control border-start-0 bg-light rounded-end-3" id="page-login-email" required placeholder="admin@laptophub.id">
+                      </div>
+                    </div>
+                    <div class="mb-4">
+                      <label for="page-login-password" class="form-label fw-bold text-dark small">Password</label>
+                      <div class="input-group">
+                        <span class="input-group-text bg-light text-muted border-end-0"><i data-lucide="lock" style="width:16px;height:16px;"></i></span>
+                        <input type="password" class="form-control border-start-0 bg-light rounded-end-3" id="page-login-password" required placeholder="••••••••">
+                      </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 rounded-pill py-2.5 shadow-sm fw-bold" id="btn-page-submit-login">
+                      Masuk Dashboard
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= LAPTOP DETAIL VIEW (HALAMAN DETAIL) ================= -->
+      <section id="detail-section" class="d-none py-5 bg-light-subtle">
+        <div class="container animate-fade-in">
+          <!-- Back button and breadcrumb -->
+          <div class="mb-4 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+            <button class="btn btn-outline-dark rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 fw-semibold" id="btn-back-to-catalog">
+              <i data-lucide="arrow-left" style="width: 18px; height: 18px;"></i> Kembali ke Katalog
+            </button>
+            <nav aria-label="breadcrumb" class="d-none d-sm-block">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none" id="breadcrumb-home">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none" id="breadcrumb-catalog">Katalog</a></li>
+                <li class="breadcrumb-item active" aria-current="page" id="detail-breadcrumb-title">Detail Laptop</li>
+              </ol>
+            </nav>
+          </div>
+
+          <!-- Bootstrap Card Modern -->
+          <div class="card border-0 shadow-lg rounded-4 overflow-hidden bg-white">
+            <div class="row g-0">
+              <!-- Left Column: Image and Price Badge -->
+              <div class="col-lg-5 bg-light d-flex flex-column justify-content-between p-4 p-md-5 border-end">
+                <div class="text-center my-auto">
+                  <div class="position-relative rounded-4 overflow-hidden shadow-sm bg-white p-3 border mb-4">
+                    <img id="detail-page-img" src="" class="img-fluid rounded-3 object-fit-contain w-100" style="max-height: 380px; transition: transform 0.3s ease;" alt="Laptop Image" referrerPolicy="no-referrer">
+                    <span class="position-absolute top-0 start-0 m-3 badge bg-primary text-uppercase px-3 py-2 rounded-pill shadow-sm" id="detail-page-kategori">Gaming</span>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="card border-0 bg-primary-subtle rounded-4 p-3 text-center h-100 shadow-sm">
+                      <span class="text-muted small d-block mb-1">Harga Baru (Mulai)</span>
+                      <h4 class="fw-extrabold text-primary mb-0" id="detail-page-harga-baru">Rp 0</h4>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card border-0 bg-success-subtle rounded-4 p-3 text-center h-100 shadow-sm">
+                      <span class="text-muted small d-block mb-1">Perkiraan Harga Bekas</span>
+                      <h4 class="fw-extrabold text-success mb-0" id="detail-page-harga-bekas">Rp 0</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Specs and Description -->
+              <div class="col-lg-7 p-4 p-md-5">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="badge bg-dark rounded-pill px-3 py-1 text-uppercase fw-semibold" id="detail-page-brand">ASUS</span>
+                  <div class="text-muted small"><i data-lucide="clock" class="align-middle me-1" style="width:14px;height:14px;"></i> Terakhir Diperbarui</div>
+                </div>
+                
+                <h2 class="fw-extrabold text-dark tracking-tight mb-4" id="detail-page-nama">ASUS ROG Zephyrus G14</h2>
+
+                <!-- Specs Card -->
+                <div class="card border-0 bg-light rounded-4 p-4 mb-4">
+                  <h5 class="fw-bold text-dark mb-4 d-flex align-items-center gap-2">
+                    <i data-lucide="cpu" class="text-primary" style="width: 22px; height: 22px;"></i> Spesifikasi Lengkap Perangkat
+                  </h5>
+                  <div class="row g-4">
+                    <div class="col-sm-6">
+                      <div class="d-flex align-items-start gap-3">
+                        <div class="p-2 bg-white rounded-3 border">
+                          <i data-lucide="microchip" class="text-secondary" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div>
+                          <span class="text-muted d-block small">Processor (CPU)</span>
+                          <span class="fw-bold text-dark" id="detail-page-processor">-</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="d-flex align-items-start gap-3">
+                        <div class="p-2 bg-white rounded-3 border">
+                          <i data-lucide="activity" class="text-secondary" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div>
+                          <span class="text-muted d-block small">Kartu Grafis (GPU)</span>
+                          <span class="fw-bold text-dark" id="detail-page-gpu">-</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="d-flex align-items-start gap-3">
+                        <div class="p-2 bg-white rounded-3 border">
+                          <i data-lucide="database" class="text-secondary" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div>
+                          <span class="text-muted d-block small">Kapasitas RAM</span>
+                          <span class="fw-bold text-dark" id="detail-page-ram">-</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="d-flex align-items-start gap-3">
+                        <div class="p-2 bg-white rounded-3 border">
+                          <i data-lucide="hard-drive" class="text-secondary" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div>
+                          <span class="text-muted d-block small">Storage</span>
+                          <span class="fw-bold text-dark" id="detail-page-storage">-</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="d-flex align-items-start gap-3 border-top pt-3">
+                        <div class="p-2 bg-white rounded-3 border">
+                          <i data-lucide="monitor" class="text-secondary" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div>
+                          <span class="text-muted d-block small">Dimensi / Spesifikasi Layar</span>
+                          <span class="fw-bold text-dark" id="detail-page-layar">-</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Description Card -->
+                <div class="mb-4">
+                  <h5 class="fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+                    <i data-lucide="text-quote" class="text-primary" style="width: 22px; height: 22px;"></i> Deskripsi & Ulasan
+                  </h5>
+                  <div class="p-3 bg-white border rounded-4">
+                    <p class="text-muted mb-0" style="line-height: 1.7; font-size: 14.5px; text-align: justify;" id="detail-page-deskripsi">
+                      Tidak ada deskripsi spesifik mengenai laptop ini.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Action Button for Users (Contact via WhatsApp/Email or share) -->
+                <div class="d-flex flex-wrap gap-2 pt-2">
+                  <a href="#" target="_blank" id="btn-detail-hubungi" class="btn btn-primary rounded-pill px-4 py-2.5 fw-bold d-inline-flex align-items-center gap-2 shadow-sm">
+                    <i data-lucide="message-square" style="width:18px;height:18px;"></i> Hubungi via WhatsApp
+                  </a>
+                  <button id="btn-detail-share" class="btn btn-outline-secondary rounded-pill px-4 py-2.5 fw-bold d-inline-flex align-items-center gap-2">
+                    <i data-lucide="share-2" style="width:18px;height:18px;"></i> Bagikan Laptop
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= ADMIN VIEW (DASHBOARD & INVENTORY) ================= -->
+    <section id="admin-section" class="d-none bg-light min-vh-100">
+      <div class="d-flex min-vh-100 flex-column flex-md-row">
+        
+        <!-- SIDEBAR -->
+        <aside class="bg-dark text-white p-4 d-flex flex-column shadow-lg" style="width: 280px; min-width: 280px;">
+          <div class="d-flex align-items-center gap-2 mb-4 pb-3 border-bottom border-secondary">
+            <i data-lucide="laptop" class="text-primary animate-pulse-subtle" style="width: 28px; height: 28px;"></i>
+            <span class="fw-extrabold text-white fs-4">LaptopHub <span class="text-primary fs-6">Admin</span></span>
+          </div>
+          
+          <ul class="nav nav-pills flex-column mb-auto gap-2" id="admin-sidebar-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white active d-flex align-items-center gap-3 py-2.5 px-3 rounded-3" id="admin-menu-dashboard">
+                <i data-lucide="layout-dashboard" style="width: 20px; height: 20px;"></i>
+                <span class="fw-semibold">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white d-flex align-items-center gap-3 py-2.5 px-3 rounded-3" id="admin-menu-inventory">
+                <i data-lucide="table-properties" style="width: 20px; height: 20px;"></i>
+                <span class="fw-semibold">Inventaris Laptop</span>
+              </a>
+            </li>
+          </ul>
+          
+          <div class="pt-3 border-top border-secondary mt-3">
+            <div class="badge bg-primary bg-opacity-25 text-primary border border-primary border-opacity-50 rounded-pill px-3 py-2 w-100 mb-3 text-start d-flex align-items-center gap-2">
+              <span class="spinner-grow spinner-grow-sm text-primary" role="status" style="width: 8px; height: 8px;"></span>
+              <span class="small fw-bold">Admin Mode</span>
+            </div>
+            <button class="btn btn-outline-danger rounded-pill w-100 d-flex align-items-center justify-content-center gap-2 py-2" id="btn-admin-logout">
+              <i data-lucide="log-out" style="width: 16px; height: 16px;"></i>
+              <span>Keluar Sesi</span>
+            </button>
+          </div>
+        </aside>
+        
+        <!-- MAIN CONTENT AREA -->
+        <main class="flex-grow-1 p-4 overflow-y-auto bg-light" style="max-height: 100vh;">
+          
+          <!-- VIEW A: DASHBOARD VIEW -->
+          <div id="admin-view-dashboard" class="">
+            <!-- Welcome Title -->
+            <div class="card border-0 shadow-sm rounded-4 bg-white p-4 mb-4">
+              <div class="d-flex align-items-center gap-3">
+                <div class="p-3 bg-primary-subtle text-primary rounded-circle">
+                  <i data-lucide="layout-dashboard" style="width: 28px; height: 28px;"></i>
+                </div>
+                <div>
+                  <h2 class="fw-extrabold text-dark tracking-tight mb-1 text-primary">Dashboard Ringkasan</h2>
+                  <p class="text-muted m-0 small">Statistik inventaris katalog dan entri laptop terbaru di database.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Quick Statistics Cards -->
+            <div class="row mb-4">
+              <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card border-0 shadow-sm rounded-4 p-3 bg-white h-100">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="p-3 bg-primary-subtle text-primary rounded-3">
+                      <i data-lucide="laptop" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div>
+                      <span class="text-muted small d-block">Total Laptop</span>
+                      <h3 class="fw-bold text-dark mb-0" id="stat-total">0</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card border-0 shadow-sm rounded-4 p-3 bg-white h-100">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="p-3 bg-success-subtle text-success rounded-3">
+                      <i data-lucide="tag" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div>
+                      <span class="text-muted small d-block">Rata-rata Harga</span>
+                      <h5 class="fw-bold text-dark mb-0 text-truncate" style="max-width: 140px;" id="stat-avg-price">Rp 0</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card border-0 shadow-sm rounded-4 p-3 bg-white h-100">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="p-3 bg-warning-subtle text-warning rounded-3">
+                      <i data-lucide="gem" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div>
+                      <span class="text-muted small d-block">Brand Terbanyak</span>
+                      <h5 class="fw-bold text-dark mb-0 text-truncate" style="max-width: 140px;" id="stat-top-brand">-</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="card border-0 shadow-sm rounded-4 p-3 bg-white h-100">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="p-3 bg-danger-subtle text-danger rounded-3">
+                      <i data-lucide="gamepad-2" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div>
+                      <span class="text-muted small d-block">Laptop Gaming</span>
+                      <h3 class="fw-bold text-dark mb-0" id="stat-gaming">0</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 3 Latest Laptops -->
+            <div class="card border-0 shadow-sm rounded-4 bg-white p-4 mb-4">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i data-lucide="history" class="text-primary" style="width: 20px; height: 20px;"></i>
+                <h5 class="fw-bold text-dark m-0">3 Laptop Terbaru Diinput</h5>
+              </div>
+              <div class="row g-4" id="admin-latest-laptops-container">
+                <!-- Rendered dynamically via JS -->
+              </div>
+            </div>
+          </div>
+          
+          <!-- VIEW B: INVENTORY VIEW -->
+          <div id="admin-view-inventory" class="d-none">
+            <!-- Welcome Title & Add Button -->
+            <div class="card border-0 shadow-sm rounded-4 bg-white p-4 mb-4">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center g-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="p-3 bg-success-subtle text-success rounded-circle">
+                    <i data-lucide="table-properties" style="width: 28px; height: 28px;"></i>
+                  </div>
+                  <div>
+                    <h2 class="fw-extrabold text-dark tracking-tight mb-1 text-primary">Inventaris Katalog Laptop</h2>
+                    <p class="text-muted m-0 small">Kelola data spesifikasi laptop, brand, harga, serta deskripsi katalog.</p>
+                  </div>
+                </div>
+                <button class="btn btn-primary rounded-pill px-4 py-2.5 shadow-sm d-flex align-items-center gap-2 fw-semibold" id="btn-admin-add-laptop">
+                  <i data-lucide="plus-circle" style="width: 20px; height: 20px;"></i>
+                  Tambah Laptop Baru
+                </button>
+              </div>
+            </div>
+            
+            <!-- TABLE OF LAPTOPS -->
+            <div class="card border-0 shadow-sm rounded-4 bg-white overflow-hidden mb-4">
+              <div class="card-header bg-white border-0 py-4 px-4 d-flex flex-column flex-sm-row justify-content-between align-items-sm-center g-3">
+                <h5 class="fw-bold text-dark m-0">Tabel Inventaris</h5>
+                <div class="d-flex gap-2 align-items-center position-relative" style="max-width: 300px; width: 100%;">
+                  <i data-lucide="search" class="text-secondary position-absolute ms-3" style="width: 16px; height: 16px; left: 0;"></i>
+                  <input type="text" class="form-control form-control-sm rounded-pill ps-5 py-2" id="admin-table-search" placeholder="Cari nama atau brand...">
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-hover table-striped align-middle mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th class="text-center" style="width: 50px;">No</th>
+                      <th>Gambar</th>
+                      <th>Nama Laptop</th>
+                      <th>Kategori</th>
+                      <th>Spesifikasi</th>
+                      <th>Harga (Baru & Bekas)</th>
+                      <th class="text-center" style="width: 120px;">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-table-body">
+                    <!-- Rendered dynamically via JS -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+        </main>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5 mt-auto border-top border-secondary" id="footer-section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <i data-lucide="laptop" class="text-primary animate-pulse-subtle" style="width: 24px; height: 24px;"></i>
+              <span class="fw-extrabold text-white fs-4">Laptop<span class="text-primary">Hub</span></span>
+            </div>
+            <p class="text-white-50 small" style="line-height: 1.6;">LaptopHub adalah platform pencarian, ulasan, spesifikasi, dan katalog harga laptop terlengkap dan terpercaya di Indonesia. Didesain untuk membantu Anda menentukan keputusan pembelian yang tepat.</p>
+            <div class="d-flex gap-3 mt-4">
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i data-lucide="facebook" style="width: 16px; height: 16px;"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i data-lucide="instagram" style="width: 16px; height: 16px;"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i data-lucide="twitter" style="width: 16px; height: 16px;"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h6 class="fw-bold text-white mb-3 text-uppercase tracking-wider" style="font-size: 12px;">Navigasi Cepat</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2 small">
+              <li><a href="#" class="text-white-50 text-decoration-none hover-text-primary" id="footer-link-home">Mulai dari Home</a></li>
+              <li><a href="#" class="text-white-50 text-decoration-none hover-text-primary" id="footer-link-catalog">Katalog Lengkap</a></li>
+              <li><a href="#" class="text-white-50 text-decoration-none hover-text-primary" id="footer-link-admin">Area Administrator</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h6 class="fw-bold text-white mb-3 text-uppercase tracking-wider" style="font-size: 12px;">Kategori Favorit</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2 small">
+              <li><a href="#" class="text-white-50 text-decoration-none hover-text-primary footer-category-link" data-category="Gaming">Laptop Gaming</a></li>
+              <li><a href="#" class="text-white-50 text-decoration-none hover-text-primary footer-category-link" data-category="Creator">Content Creator & Editing</a></li>
+              <li><a href="#" class="text-white-50 text-decoration-none hover-text-primary footer-category-link" data-category="Business">Business & Ultrabook</a></li>
+              <li><a href="#" class="text-white-50 text-decoration-none hover-text-primary footer-category-link" data-category="Student">Student & Sekolah</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h6 class="fw-bold text-white mb-3 text-uppercase tracking-wider" style="font-size: 12px;">Kontak & Bantuan</h6>
+            <p class="text-white-50 small mb-2"><i data-lucide="mail" class="align-middle me-2 text-primary" style="width: 14px; height: 14px;"></i> support@laptophub.id</p>
+            <p class="text-white-50 small mb-2"><i data-lucide="phone" class="align-middle me-2 text-primary" style="width: 14px; height: 14px;"></i> +62 823-9685-4199</p>
+            <p class="text-white-50 small mb-2"><i data-lucide="map-pin" class="align-middle me-2 text-primary" style="width: 14px; height: 14px;"></i> Jakarta Selatan, Indonesia</p>
+          </div>
+        </div>
+        <hr class="border-secondary my-4">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="m-0 text-white-50 small">&copy; 2026 LaptopHub. Semua Hak Cipta Dilindungi.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+            <span class="text-white-50 small">Situs Terlindungi oleh SSL Enkripsi.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- ================= MODALS SECTION ================= -->
+
+    <!-- 1. DETAIL SPESIFIKASI MODAL -->
+    <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+          <div class="modal-header border-0 bg-light p-4">
+            <h5 class="modal-title fw-bold text-dark" id="detailModalLabel">Spesifikasi Detail</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="row g-4">
+              <!-- Left side: image & price box -->
+              <div class="col-md-5">
+                <div class="rounded-4 overflow-hidden border bg-light mb-3" style="height: 240px;">
+                  <img id="detail-img" src="" class="w-100 h-100 object-fit-cover" alt="Laptop Image" referrerPolicy="no-referrer">
+                </div>
+                <div class="card border-0 bg-primary-subtle rounded-4 p-3 mb-2 text-center">
+                  <span class="text-muted small d-block">Perkiraan Harga Baru</span>
+                  <h4 class="fw-bold text-primary mb-0" id="detail-harga-baru">Rp 0</h4>
+                </div>
+                <div class="card border-0 bg-success-subtle rounded-4 p-3 text-center">
+                  <span class="text-muted small d-block">Perkiraan Harga Bekas</span>
+                  <h4 class="fw-bold text-success mb-0" id="detail-harga-bekas">Rp 0</h4>
+                </div>
+              </div>
+              <!-- Right side: Specs table -->
+              <div class="col-md-7">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-dark rounded-pill px-3 py-1 text-uppercase fw-semibold" id="detail-brand">BRAND</span>
+                  <span class="badge bg-primary rounded-pill px-3 py-1 text-uppercase fw-semibold" id="detail-kategori">KATEGORI</span>
+                </div>
+                <h3 class="fw-extrabold text-dark mb-4" id="detail-nama">Nama Laptop</h3>
+
+                <h6 class="fw-bold text-secondary mb-3">Spesifikasi Perangkat Keras</h6>
+                <div class="table-responsive">
+                  <table class="table table-sm table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="text-muted py-2 font-monospace text-xs" style="width: 140px;">Processor</th>
+                        <td class="fw-semibold text-dark py-2" id="detail-processor">-</td>
+                      </tr>
+                      <tr>
+                        <th class="text-muted py-2 font-monospace text-xs">Kartu Grafis (GPU)</th>
+                        <td class="fw-semibold text-dark py-2" id="detail-gpu">-</td>
+                      </tr>
+                      <tr>
+                        <th class="text-muted py-2 font-monospace text-xs">Ukuran RAM</th>
+                        <td class="fw-semibold text-dark py-2" id="detail-ram">-</td>
+                      </tr>
+                      <tr>
+                        <th class="text-muted py-2 font-monospace text-xs">Penyimpanan</th>
+                        <td class="fw-semibold text-dark py-2" id="detail-storage">-</td>
+                      </tr>
+                      <tr>
+                        <th class="text-muted py-2 font-monospace text-xs">Ukuran Layar</th>
+                        <td class="fw-semibold text-dark py-2" id="detail-layar">-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h6 class="fw-bold text-secondary mt-4 mb-2">Deskripsi Produk</h6>
+                <p class="text-muted small" style="line-height: 1.6;" id="detail-deskripsi">Tidak ada deskripsi tersedia untuk laptop ini.</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0 p-3 bg-light">
+            <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 3. LAPTOP FORM MODAL (ADD & EDIT) -->
+    <div class="modal fade" id="laptopFormModal" tabindex="-1" aria-labelledby="laptopFormModalLabel" aria-hidden="true" data-bs-backdrop="static">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+          <div class="modal-header border-0 bg-success text-white p-4" id="laptop-form-header">
+            <div class="d-flex align-items-center gap-2">
+              <i data-lucide="plus-circle" id="laptop-form-icon" style="width: 24px; height: 24px;"></i>
+              <h5 class="modal-title fw-bold m-0" id="laptopFormModalLabel">Tambah Data Laptop</h5>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <form id="laptop-form">
+            <input type="hidden" id="laptop-form-id">
+            
+            <div class="modal-body p-4 bg-light">
+              <div class="row">
+                
+                <!-- Kiri: Spesifikasi Umum & Identitas -->
+                <div class="col-md-6 border-end border-light">
+                  <h6 class="fw-bold text-primary mb-3">Informasi Utama</h6>
+                  
+                  <!-- Nama Laptop -->
+                  <div class="mb-3">
+                    <label for="laptop-nama" class="form-label small fw-bold text-dark">Nama Lengkap Laptop</label>
+                    <input type="text" class="form-control rounded-3" id="laptop-nama" required placeholder="Contoh: ASUS ROG Zephyrus G14">
+                  </div>
+
+                  <!-- Brand & Kategori -->
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="laptop-brand" class="form-label small fw-bold text-dark">Brand</label>
+                      <select class="form-select rounded-3" id="laptop-brand" required>
+                        <option value="">Pilih Brand</option>
+                        <option value="ASUS">ASUS</option>
+                        <option value="Lenovo">Lenovo</option>
+                        <option value="Acer">Acer</option>
+                        <option value="HP">HP</option>
+                        <option value="Apple">Apple</option>
+                        <option value="MSI">MSI</option>
+                        <option value="Dell">Dell</option>
+                        <option value="Infinix">Infinix</option>
+                        <option value="Xiaomi">Xiaomi</option>
+                        <option value="Gigabyte">Gigabyte</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <label for="laptop-kategori" class="form-label small fw-bold text-dark">Kategori</label>
+                      <select class="form-select rounded-3" id="laptop-kategori" required>
+                        <option value="">Pilih Kategori</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Productivity">Productivity</option>
+                        <option value="Creator">Creator</option>
+                        <option value="Business">Business</option>
+                        <option value="Student">Student</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Harga Baru & Bekas -->
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="laptop-harga-baru" class="form-label small fw-bold text-dark">Harga Baru (IDR)</label>
+                      <input type="number" class="form-control rounded-3" id="laptop-harga-baru" required placeholder="Contoh: 15000000">
+                    </div>
+                    <div class="col-6">
+                      <label for="laptop-harga-bekas" class="form-label small fw-bold text-dark">Harga Bekas (IDR)</label>
+                      <input type="number" class="form-control rounded-3" id="laptop-harga-bekas" required placeholder="Contoh: 11500000">
+                    </div>
+                  </div>
+
+                  <!-- Media / Gambar -->
+                  <div class="mb-3">
+                    <label for="laptop-image-url" class="form-label small fw-bold text-dark"><i data-lucide="link" class="align-middle me-1" style="width: 14px; height: 14px;"></i> URL Gambar Laptop</label>
+                    <input type="url" class="form-control rounded-3" id="laptop-image-url" placeholder="https://domain.com/gambar-laptop.jpg">
+                  </div>
+
+                </div>
+
+                <!-- Kanan: Detail Hardware Spesifikasi -->
+                <div class="col-md-6 ps-md-4">
+                  <h6 class="fw-bold text-success mb-3">Spesifikasi Teknis</h6>
+
+                  <!-- Processor & GPU -->
+                  <div class="mb-3">
+                    <label for="laptop-processor" class="form-label small fw-bold text-dark">Processor (CPU)</label>
+                    <input type="text" class="form-control rounded-3" id="laptop-processor" required placeholder="Contoh: AMD Ryzen 7 7735HS / Intel Core i7-13700H">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="laptop-gpu" class="form-label small fw-bold text-dark">GPU (VGA Card)</label>
+                    <input type="text" class="form-control rounded-3" id="laptop-gpu" required placeholder="Contoh: NVIDIA GeForce RTX 4060 8GB">
+                  </div>
+
+                  <!-- RAM, ROM, Layar -->
+                  <div class="row mb-3">
+                    <div class="col-4">
+                      <label for="laptop-ram" class="form-label small fw-bold text-dark">RAM (GB)</label>
+                      <select class="form-select rounded-3" id="laptop-ram" required>
+                        <option value="4GB">4GB</option>
+                        <option value="8GB">8GB</option>
+                        <option value="12GB">12GB</option>
+                        <option value="16GB" selected>16GB</option>
+                        <option value="24GB">24GB</option>
+                        <option value="32GB">32GB</option>
+                        <option value="64GB">64GB</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="laptop-storage" class="form-label small fw-bold text-dark">Storage</label>
+                      <select class="form-select rounded-3" id="laptop-storage" required>
+                        <option value="256GB SSD">256GB SSD</option>
+                        <option value="512GB SSD" selected>512GB SSD</option>
+                        <option value="1TB SSD">1TB SSD</option>
+                        <option value="2TB SSD">2TB SSD</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="laptop-layar" class="form-label small fw-bold text-dark">Layar</label>
+                      <input type="text" class="form-control rounded-3" id="laptop-layar" required placeholder="Contoh: 14&quot; QHD+">
+                    </div>
+                  </div>
+
+                  <!-- Deskripsi -->
+                  <div class="mb-3">
+                    <label for="laptop-deskripsi" class="form-label small fw-bold text-dark">Deskripsi Ringkas / Keunggulan</label>
+                    <textarea class="form-control rounded-3" id="laptop-deskripsi" rows="4" placeholder="Tuliskan ulasan ringkas mengenai laptop, spesifikasi tambahan, atau kondisi barang..."></textarea>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            
+            <div class="modal-footer border-0 p-4 bg-light-subtle d-flex justify-content-end gap-2">
+              <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Batal</button>
+              <button type="submit" class="btn btn-success rounded-pill px-4" id="btn-submit-laptop">
+                <span class="spinner-border spinner-border-sm d-none me-2" role="status" id="laptop-submit-spinner"></span>
+                <span id="laptop-submit-text">Simpan Data</span>
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap 5.3 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- SweetAlert2 CDN for high quality popups -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Modular Application JS -->
+    <script type="module" src="/src/main.js"></script>
+
+  </body>
+</html>

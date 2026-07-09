@@ -1,0 +1,6 @@
+{
+  "name": "LaptopHub",
+  "description": "Katalog laptop dan PC modern untuk membantu mencari spesifikasi laptop terbaik. Dilengkapi fitur pencarian, filter, dan dashboard admin bertenaga Firebase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
