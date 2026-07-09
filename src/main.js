@@ -74,7 +74,11 @@ function setupEventListeners() {
     logoClickCount++;
     if (logoClickCount >= 5) {
       logoClickCount = 0;
-      switchView("login");
+      if (loggedInUser) {
+        switchView("admin");
+      } else {
+        switchView("login");
+      }
     } else {
       switchView("home");
     }
@@ -165,7 +169,11 @@ function setupEventListeners() {
   if (copyrightText) {
     copyrightText.style.cursor = "default";
     copyrightText.addEventListener("dblclick", () => {
-      switchView("login");
+      if (loggedInUser) {
+        switchView("admin");
+      } else {
+        switchView("login");
+      }
     });
   }
 
@@ -581,21 +589,15 @@ function switchView(view) {
 function handleAuthStateChange(user) {
   loggedInUser = user;
 
-  const adminLi = document.getElementById("nav-admin-dashboard-li");
-  const adminStatusBadge = document.getElementById("admin-status-badge");
   const btnLoginNav = document.getElementById("btn-login-nav");
   const btnLogoutNav = document.getElementById("btn-logout-nav");
 
   if (user) {
     // Admin login
-    if (adminLi) adminLi.classList.remove("d-none");
-    if (adminStatusBadge) adminStatusBadge.classList.remove("d-none");
     if (btnLoginNav) btnLoginNav.classList.add("d-none");
     if (btnLogoutNav) btnLogoutNav.classList.remove("d-none");
   } else {
     // Admin logout
-    if (adminLi) adminLi.classList.add("d-none");
-    if (adminStatusBadge) adminStatusBadge.classList.add("d-none");
     if (btnLoginNav) btnLoginNav.classList.add("d-none"); // Tetap disembunyikan agar login bersifat rahasia
     if (btnLogoutNav) btnLogoutNav.classList.add("d-none");
     switchView("home");
